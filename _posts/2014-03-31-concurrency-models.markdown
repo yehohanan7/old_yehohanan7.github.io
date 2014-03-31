@@ -27,7 +27,7 @@ I should mention that clojure community has done some really cool concurrency ab
 <h3><small>Actor model/Async message passing</small></h3>
 
 This is my favourite approach compared to other models and the simplest one too. with this model you will see hundreds and millions of actors/processes (not threads) running with its own private memory, problemo solved! 
-Yes, its very simple approach - "dont share data" but rather pass data if an actor needs it. this approach demands you to model your problem differently as actors and messages, its not object oriented but i feel its better than OO if scaling is your priority. 
+Yes, its very simple approach - "dont share data" but rather pass data if an actor needs it. this approach demands you to model your problem differently as actors and messages, its not object oriented but i feel actor model is a flavour of OO which is done right to scale!
 
 Erlang is one language which adapts this model very well though scala & akka follows erlang on the JVM. i prefer erlang's approach because erlang has it's own scheduler to schedule the processes/actors which is very powerful, the scheduler allocated time slice for each actor is at the instruction(s) level and not message level like akka. 
 Akka uses the same actor model but it relies on OS thread scheduling (as it uses java thread pools internally). which means, when a message is sent to an actor, it holds the thread till it completes handling the message! which is not bad, but when you compare with erlang i am sure it makes a difference if the load on your application increases massively.
