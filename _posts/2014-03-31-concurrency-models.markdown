@@ -31,3 +31,5 @@ Yes, its very simple approach - "dont share data" but rather pass data if an act
 
 Erlang is one language which adapts this model very well though scala & akka follows erlang on the JVM. i prefer erlang's approach because erlang has it's own scheduler to schedule the processes/actors which is very powerful, the scheduler allocated time slice for each actor is at the instruction(s) level and not message level like akka. 
 Akka uses the same actor model but it relies on OS thread scheduling (as it uses java thread pools internally). which means, when a message is sent to an actor, it holds the thread till it completes handling the message! which is not bad, but when you compare with erlang i am sure it makes a difference if the load on your application increases massively.
+
+The only problem i can think of with actor model is the message copies that is passed between actors which might eat up your memory but is that really a problem with today's hardware cost?
