@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Callback vs Reactive"
+title:  "Callbacks & Message Passing"
 date:   2014-04-25 12:22:40
 categories: erlang
 ---
@@ -125,7 +125,7 @@ You can now write all layers of your code in a very reactive manner by not maint
 
 Now the data flows from the source (fb, twitter, linkedin) to the UI very smoothly, refer to "flow based programming" to know more about this style of programming paradigm
 
-<h3><small>Erlang and Elixir</small></h3>
+<h3><small>Erlang/Elixir and Message passing</small></h3>
 
 Why Erlang and Elxir now?
 I feel erlang and elixir (both running on the erlang virtual machine or beam) are designed to support such flow based architecture using message passing, it scales better than NodeJS!
