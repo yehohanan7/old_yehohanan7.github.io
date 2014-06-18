@@ -8,7 +8,7 @@ categories: elixir
 Coming from a java background, I have been trying out different languages lately like Clojure, Haskell, Erlang, Elixir etc. I started programming more in functional style and it took some time for me to retrain my OO brain to think functionally.
 <ul>
 <li>  Now I dont feel bad seeing a class with a lot of smaller but well defined static (pure) functions in the code base
-<li>  I don't prefer modeling behaviours than data
+<li>  I prefer modeling behaviours than data
 <li>  I prefer composition over inheritance
 <li>  I started prefering bottom up style of development 
 <li>  TDD makes more sense to me than before
