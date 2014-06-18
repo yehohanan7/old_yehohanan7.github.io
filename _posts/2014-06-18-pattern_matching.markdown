@@ -6,16 +6,18 @@ categories: elixir
 ---
 
 Coming from a java background, I have been trying out different languages lately like Clojure, Haskell, Erlang, Elixir etc. I started programming more in functional style and it took some time for me to retrain my OO brain to think functionally.
-- Now I dont feel bad seeing a class with a lot of smaller but well defined static (pure) functions in the code base
-- I don't prefer modeling behaviours than data
-- I prefer composition over inheritance
-- I started prefering bottom up style of development 
-- TDD makes more sense to me than before
-- Immutability everywhere!
-- I keep my eye open to spot an opportunity to do lazy evaluations & make use of streams
-- Alergic to side effects 
-- Prefer flow based programming
-- Functions are my first class citizens
+<ul>
+<li> - Now I dont feel bad seeing a class with a lot of smaller but well defined static (pure) functions in the code base
+<li> - I don't prefer modeling behaviours than data
+<li> - I prefer composition over inheritance
+<li> - I started prefering bottom up style of development 
+<li> - TDD makes more sense to me than before
+<li> - Immutability everywhere!
+<li> - I keep my eye open to spot an opportunity to do lazy evaluations & make use of streams
+<li> - Alergic to side effects 
+<li> - Prefer flow based programming
+<li> - Functions are my first class citizens
+</ul>
 ... and the list goes on
 
 Having listed down the changes that i have developed in my thinking towards programming, there is one specific change that i developed which i wanted to bring out in this blog which is "alergic to if/else conditions"
