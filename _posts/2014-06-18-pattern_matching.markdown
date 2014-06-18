@@ -7,16 +7,16 @@ categories: elixir
 
 Coming from a java background, I have been trying out different languages lately like Clojure, Haskell, Erlang, Elixir etc. I started programming more in functional style and it took some time for me to retrain my OO brain to think functionally.
 <ul>
-<li> - Now I dont feel bad seeing a class with a lot of smaller but well defined static (pure) functions in the code base
-<li> - I don't prefer modeling behaviours than data
-<li> - I prefer composition over inheritance
-<li> - I started prefering bottom up style of development 
-<li> - TDD makes more sense to me than before
-<li> - Immutability everywhere!
-<li> - I keep my eye open to spot an opportunity to do lazy evaluations & make use of streams
-<li> - Alergic to side effects 
-<li> - Prefer flow based programming
-<li> - Functions are my first class citizens
+<li>  Now I dont feel bad seeing a class with a lot of smaller but well defined static (pure) functions in the code base
+<li>  I don't prefer modeling behaviours than data
+<li>  I prefer composition over inheritance
+<li>  I started prefering bottom up style of development 
+<li>  TDD makes more sense to me than before
+<li>  Immutability everywhere!
+<li>  I keep my eye open to spot an opportunity to do lazy evaluations & make use of streams
+<li>  Alergic to side effects 
+<li>  Prefer flow based programming
+<li>  Functions are my first class citizens
 </ul>
 ... and the list goes on
 
