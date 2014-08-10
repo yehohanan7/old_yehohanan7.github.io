@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Perfection"
-date:   2014-03-31 12:22:40
+date:   2014-08-31 12:22:40
 categories: elixir
 ---
 
