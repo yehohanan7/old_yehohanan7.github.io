@@ -12,6 +12,7 @@ why is it that most of what we do is not perfect at the first instant when we at
 may be it's related to how our human brains work and the theory of learning.. you get better at anything you do only when you do it for years, that is how we become experts, but when you ask any expert, he will say he has more to learn and he continues to practice! has anyone become perfect in any field?
 
 I think we cannot achieve perfection, we move towards perfection through the recursion of the steps - "formulate", "evaluate", "stare", "loop" (FESL).
+
 Every time i write code, I follow endless repetition of FESL! i write code, i evaluate its correctness and then the most important step of just staring at the code for long until i find some room for improvement and repeat FESL again.
 The improvement could be just a cosmetic change to make it look good, or it could be a performance optimisation or even it could be just simplifying the code by deleting unwanted elements (most of the time it’s about deleting the code).
 
