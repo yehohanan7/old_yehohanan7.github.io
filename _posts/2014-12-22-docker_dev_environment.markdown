@@ -16,7 +16,7 @@ This Blog is a step by step guide to building your development environment:
 
 <li> Create a Dockerfile to build your docker image, Below is a sample (working) Dockerfile for your reference
 
-{% highlight script %}
+{% highlight bash %}
 
 VERSION 0.0.3
 FROM ubuntu:14.04
@@ -71,7 +71,7 @@ If you notice, I install some basic softwares that are required especially Ansib
 
 I use the below script file to pull the image, you can notice how I mount my file system on to the docker image to get persistence
 
-{% highlight shell %}
+{% highlight bash %}
 
 #!/bin/sh -e
 sudo docker run -v /path/to/couchdb:/couchdb -i -t -P yehohanan7/devbox bash
