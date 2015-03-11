@@ -30,8 +30,8 @@ In clojure, each node in the tree is an array of size 32. Let's assume you creat
 If you now want to lookup any element in a vector of size less than 1024, it's a 2 step process:
 
 <ul>
-<li> Find the child in which the element belongs using an index - i
-<li> Find the index in the child node using another index - j
+<li> Find an index of the child node - i
+<li> Find hte index of the element in the child node - j
 </ul>
 
 <br/>
