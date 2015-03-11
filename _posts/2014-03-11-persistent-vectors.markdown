@@ -30,8 +30,10 @@ If you now want to find any number in a vector of size less than 1024, it's a 2 
 <ul>
 <li> Find the child in which the element belongs using an index i
 <li> Find the index in the node using another index j
-<li> Get the element you are looking for using root[i][j]
 </ul>
+
+<br/>
+Now with thouse indices, you can get the element you are looking for using root[i][j]
 
 
 <br><br>
