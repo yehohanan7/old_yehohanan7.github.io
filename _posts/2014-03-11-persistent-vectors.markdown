@@ -43,13 +43,13 @@ As you notice, even though the 1024 elements are stored in a tree, you can look 
 
 The above illustration was for a vector of size 1024, which required 2 indices to access any element. However, As you add more elements to the vector, the tree will grow taller and you would need to determine more indices to lookup any element. But since we can pack a lot of elements at each level, the tree remains very shallow and hence provides constant time access to any element in the tree as long as you can calculate the indices "efficiently"
 
-For example, level 3 in the above example will hold 1024 * 32 elements, but you can access any element in constant time using 3 indices <br/<br/>
+For example, level 3 in the above example will hold 1024 * 32 elements, but you can access any element in constant time using 3 indices <br/><br/>
 
 How does clojure determine the indices to access element in the tree? <br/><br/>
 
 It's simple, clojure translates the index that you want to lookup in a vector into multiple indices to traverse the tree. <br/>
 
 For example, if you are looking for an element at position 2 in a vector of size 1024, Clojure will translate the index into its binary value and group them into sets of 5. where each set represents an index at each level from the root node. <br/>
-Hence the index 2 in its binary form 00000 00001 is used to arrive at a simple expression "root[0000][00001]", which is used to get the element you are looking for.
+Hence the index 2 in its binary form 00000 00001 is used to arrive at a simple expression "root[0000][00001]", which is used to get the element you are looking for. <br/><br/>
 
 Because clojure stores the elements in a trie, it's easy to provide immutability using structural sharing.
