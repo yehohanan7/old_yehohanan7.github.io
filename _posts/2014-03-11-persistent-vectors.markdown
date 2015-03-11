@@ -19,7 +19,7 @@ You are right, navigating any "balanced" tree from the root to the leaf node wil
 
 I default, each node in the tree is an array of size 32. Let's assume you create a vector of 1024 elements, which will result in a structure as shown below.
 
-                                    [. . . .................. ] => 32 child nodes
+                                    [. . . .................. ] => 32 childrens
                                     /           |             \
                                    /            |              \
                                   /             |               \   
