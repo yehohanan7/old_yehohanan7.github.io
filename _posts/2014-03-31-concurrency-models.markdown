@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_page
 title:  "Concurrency models"
 date:   2014-03-31 12:22:40
 categories: erlang

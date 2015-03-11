@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_page
 title:  "Pattern matching"
 date:   2014-06-18 12:22:40
 categories: elixir

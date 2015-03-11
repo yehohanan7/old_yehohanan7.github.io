@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_page
 title:  "Callbacks & Message Passing"
 date:   2014-04-25 12:22:40
 categories: erlang

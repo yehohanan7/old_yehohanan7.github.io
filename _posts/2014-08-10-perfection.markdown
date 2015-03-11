@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: post_page
 title:  "Perfection"
 date:   2014-08-31 12:22:40
 categories: elixir
 ---
 
-<h3> Perfection is never achieved for the first time in anything. why? </h3>
+<h3> <small>Perfection is never achieved for the first time in anything. why? </small></h3>
 In this blog, i will try to illustrate my experience and thoughts about achieving perfection (specially while writing code).
 
 why is it that most of what we do is not perfect at the first instant when we attempt to do it?
