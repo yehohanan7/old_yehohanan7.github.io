@@ -28,14 +28,16 @@ I default, each node in the tree is an array of size 32. Let's assume you create
 If you now want to find any number in a vector of size less than 1024, it's a 2 step process:
 
 <ul>
-<li> Find the child in which the element belongs using an index
-<li> Get the element in the child node (an array) using another index
+<li> Find the child in which the element belongs using an index i
+<li> Find the index in the node using another index j
+<li> Get the element you are looking for using root[i][j]
 </ul>
+
 
 <br><br>
 As you observe, even though the 1024 elements are stored in a tree, it takes just 2 steps to get an element and hence guarantees O(1) access to any element.
 
-Although the above illustration is shown for 1024 elements. The tree will grow in height as you add more elements! This does not mean you can't guarantee O(1) because as the tree grows in height, you can pack more elements in each level. for example, level 3 in the above example will hold 1024 * 32 elements. <br/><br/>
+Although the above illustration is shown for 1024 elements. The tree will grow in height as you add more elements! This does not mean you can't guarantee O(1). because, as the tree grows in height,  the number of elements you can pack at each level grows exponentially. for example, level 3 in the above example will hold 1024 * 32 elements. <br/><br/>
 
 How does clojure determine various indices to traverse the tree? <br/><br/>
 
