@@ -5,7 +5,7 @@ date:   2015-03-13
 categories: emacs
 ---
 
-<h3> <small> Emacs behind proxy </small></h3>
+<h4> <small> Emacs behind proxy </small></h4>
 
 If you want to run emacs smoothly behind a proxy, you can put the below script in your init.el file and activate it by invoking proxy-activate from M-x
 
