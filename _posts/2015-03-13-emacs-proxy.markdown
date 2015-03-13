@@ -9,7 +9,7 @@ categories: emacs
 
 If you want to run emacs smoothly behind a proxy, you can put the below script in your init.el file and activate it by invoking proxy-activate from M-x
 
-{% highlight javascript %}
+{% highlight elisp %}
 
 (defun proxy-activate ()
   (interactive)
