@@ -1,0 +1,70 @@
+---
+layout: post_page
+title:  "CQRS With DDD"
+date:   2015-03-26
+categories: architecture
+---
+
+Being a fan of DDD, I attempted to do DDD in various small projects. But everytime I tried it, I noticed a lot of boilerplate code sprouting out which converts DTOs (view objects) to domain models (entities/aggregates) and vice versa. <br/> <br/>
+
+Most of the projects that I did DDD was in Java, which means I will end up with tons of getters/setters in my DTOs along with a lot of simple transformation code. I was able to get rid of the getters & setters using librarires like Lombok but Couldn't get away with the transformation code though. <br/><br/>
+
+While trying to figure out how others have solved this problem, I came across the "CQRS pattern" - Command Query Responsibility Segregation. There are a lot of articles on the internet about CQRS, But when I read those articles, I couldn't instantly understand how to achieve CQRS without compromising DDD. While trying to understand CQRS, It took some time for me to figure out that the reason why I have too many DTOs and transformation logic is because I was combining 2 bounded contexts! one is the actual domain concept/Entity which i was trying to model in the same language the business speaks. And the other is the same domain concept but represented in a different langauge which is suitable for presenting to the users. <br/><br/>
+
+Once I started looking at the view model as a different bounded context, I could easily understand what CQRS does and appreciate the values of it.  Below is a high level view of how your code will be structured if you use CQRS <br/>
+
+<img src="/img/cqrs.jpg">
+
+
+<br/><br/>
+
+As you notice, I seperated my application into 2 logical components, the one to the left (command component) is build around a neat domain model which is modeled based on the language of the business. And the component to the right (query component) is a very simple component which serves the user with the current state of the domain concept in a language that's easy to present.
+
+<h3> Command Component </h3>
+
+In the command component, all mutating actions are handled by the corresponding command handlers. if you are using spring/jersy, then you will have your controllers to handle the action and map it to the right command handler. <br/> <br/>
+
+The command handler is like the facade which triggers the domain actions on the very holy domain model. The domain model first converts the domain action into an event, saves the event in itself (like an audit log) and handles the event by manipulating itself according to the business rule. The event will be  marked as new event as it's not persisted yet. <br/><br/>
+
+When the aggregate is persisted, the repository doesn't map the domain model to corresponding Relational model. But rather, It filters the events newly added to the domain model and saves them as "facts" into the database. This leads us to have a very flat data base schema, the data base will just store events/facts that occured in the application. <br/>
+
+The benefits of such a style of storage are:<br/>
+
+<ul>
+<li> We can build the domain model anytime by replaying the events on them
+<li> We will know exactly how the aggregates arrived at a particular state
+<li> We don't need DB migrations
+<li> We don't need ORMS! :) - this means a lot to me, because It gives me freedom to create very good domain model without worrying if the ORM can support them.
+<li> We don't loose any data
+<li> Gives more freedom to refactor my domain model without worrying about storage.
+</ul><br/><br/>
+
+
+However, there are few problems with such an approach, what if I have a lot of events? I don't think it should be any problem even if you have few hundred event's in any aggregate. If you really have a case of thousands of events, then you can optimize it by saving the snapshop of the state (like a cache) so you don't have to apply all events but only those occured after the snapshot was taken. <br/><br/>
+
+
+Before the event's are stored, The application publishes the event to an event bus so that all other systems/bounded contexts can subscribe to the event and interpret it accordingly. <br/>
+
+<h3> Query Component </h3>
+
+The Query component is another system (bounded context / micro service) or just a logical seperation in the same system (bounded context), which subscribes to events in the command component and builds a simple view data which is modeled in a way that could be directly presented to the user. <br/>
+This is nothing but your DTOs but prebuilt based on the events instead of building it everytime we need them from the domain model.
+
+
+We could also build the query component by writing map/reduce components which can run through the event's in the event store (fact db) and build various views. But I prefer that the query component listents to the events in the command component and build's its own independent db so that i get more isolation. <br/>
+if the query component is deployed as seperate micro service, then either it could use a messaging system to get all the events channeled to it or use simple RSS feed of events published by the command component. <br/><br/>
+
+Another important point to notice in CQRS pattern is that, we might not have strong consistency! i.e., imagine you deployed your query component as a seperate micro service which listens to changes in command component and builds the view model. Since it is asynchronous, the view model at any point in time will not be consistent with the events that's occuring in the command component. But we already know eventual consistency is proved to work for a lot of domain with an added benefit of scale. <br/>
+Moreover, if the commands and query are just a logical seperation (bounded contexts) on the same micro service then the events are delivered instantly to the query component and bring a state of consistency between the two easily.
+
+
+
+
+
+
+
+
+
+
+
+
