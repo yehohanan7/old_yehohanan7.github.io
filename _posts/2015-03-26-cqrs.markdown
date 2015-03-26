@@ -31,12 +31,13 @@ When the aggregate is persisted, the repository doesn't map the domain model to 
 The benefits of such a style of storage are:<br/>
 
 <ul>
-<li> We can build the domain model anytime by replaying the events on them
+<li> We can build the domain model anytime by replaying the events on them (Event sourcing)
 <li> We will know exactly how the aggregates arrived at a particular state
 <li> We don't need DB migrations
 <li> We don't need ORMS! :) - this means a lot to me, because It gives me freedom to create very good domain model without worrying if the ORM can support them.
 <li> We don't loose any data
 <li> Gives more freedom to refactor my domain model without worrying about storage.
+<li> I can project (Event source) the events into a reporting logic to produce any kind of report easily.
 </ul><br/><br/>
 
 
