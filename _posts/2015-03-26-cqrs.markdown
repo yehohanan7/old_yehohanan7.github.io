@@ -24,7 +24,7 @@ As you notice, I seperated my application into 2 logical components, the one to 
 
 In the command component, all mutating actions are handled by the corresponding command handlers. if you are using spring/jersy, then you will have your controllers to handle the action and map it to the right command handler. <br/> <br/>
 
-The command handler is like the facade which triggers the domain actions on the very holy domain model. The domain model first converts the domain action into an event, saves the event in itself (like an audit log) and handles the event by manipulating itself according to the business rule. The event will be  marked as new event as it's not persisted yet. <br/><br/>
+The command handler is like the facade which carefuly triggers the domain actions on the very holy domain model. The domain model first converts the domain action into an event, saves the event in itself (like an audit log) and handles the event by manipulating itself according to the business rule. The event will be  marked as new event as it's not persisted yet. <br/><br/>
 
 When the aggregate is persisted, the repository doesn't map the domain model to corresponding Relational model. But rather, It filters the events newly added to the domain model and saves them as "facts" into the database. This leads us to have a very flat data base schema, the data base will just store events/facts that occured in the application. <br/>
 
@@ -43,7 +43,7 @@ The benefits of such a style of storage are:<br/>
 However, there are few problems with such an approach, what if I have a lot of events? I don't think it should be any problem even if you have few hundred event's in any aggregate. If you really have a case of thousands of events, then you can optimize it by saving the snapshop of the state (like a cache) so you don't have to apply all events but only those occured after the snapshot was taken. <br/><br/>
 
 
-Before the event's are stored, The application publishes the event to an event bus so that all other systems/bounded contexts can subscribe to the event and interpret it accordingly. <br/>
+Before the "new" event's are stored, The application publishes them to an event bus so that all other systems/bounded contexts can subscribe to the event and interpret it accordingly. <br/>
 
 <h3> Query Component </h3>
 
