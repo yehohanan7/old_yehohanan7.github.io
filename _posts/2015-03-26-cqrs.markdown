@@ -56,9 +56,9 @@ This is nothing but your DTOs but prebuilt based on the events instead of buildi
 We could also build the query component by writing map/reduce components which can run through the events in the event store (fact db) and build various views. But I prefer that the query component listents to the events in the command component and build's its own independent db so that we have loosely coupled systems. <br/>
 The query component could observe the events using various messaging frameworks or even a simple RSS feed of events that occur in the command component, the query component is responsible for keeping it's view model in sync. <br/><br/>
 
-Another important point to notice in CQRS pattern is that, we might not have strong consistency! i.e., imagine you deployed your query component as a seperate micro service which listens to changes in command component and builds the view model. Since it is asynchronous, the view model at any point in time will not be consistent with the events that's occuring in the command component. But we already know eventual consistency is proved to work for a lot of domain with an added benefit of scale. <br/>
+Another important point to notice in CQRS pattern is that, we might not have strong consistency! i.e., imagine you deployed your query component as a seperate micro service which listens to changes in command component and builds the view model. Since it is asynchronous, the view model at any point in time will not be consistent with the events that's occuring in the command component. But we already know that eventual consistency is just enough for almost all domains with the added benefit of read scale. <br/><br/>
 
-Moreover, if the commands and query are just a logical seperation within the same bounded context then the events are delivered instantly to the query component, this will keep both the components always consistent.
+Moreover, if the commands and query are just a logical seperation within the same bounded context, then we can write synchronous code to keep both the models strongly consistent.
 
 
 
