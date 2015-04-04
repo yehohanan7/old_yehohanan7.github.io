@@ -1,6 +1,6 @@
 ---
 layout: post_page
-title:  SBCL & Slime in docker
+title:  SBCL & Swank in docker
 date:   2015-04-04
 categories: devops
 ---
