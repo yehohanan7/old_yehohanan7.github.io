@@ -19,7 +19,7 @@ However, you could also checkout the Dockerfile from https://github.com/yehohana
 Once you have built/pulled the docker image, you can start swank easily by running the below command
 
 {% highlight bash %}
-docker run -v $(pwd):/sbcl -i -t -p 4005:4005 yehohanan7/clisp swank
+docker run -i -t -p 4005:4005 yehohanan7/clisp swank
 {% endhighlight %}
 <br/><br/>
 
