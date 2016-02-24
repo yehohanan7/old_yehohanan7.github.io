@@ -40,3 +40,4 @@ Identifying patterns and building “reusable” abstractions is the art of soft
 
 In conclusion, I just want to mention that when two axiomatic systems clash, the motives shouldn’t be to prove the correctness of one axiom over other, which is impossible and stupid. The only motive should be to identify patterns in a formal system that solves a problem, the pattern which bring true harmony amidst a conflicting environment which is a quality that cannot be described in words nor can be measured but could be experienced and eventually named. True learning is when you have a mind of a beginner at every moment and an open eye (or hidden senses) to recognize the harmony produced by the living patterns! <br/> <br/>
 
+Here ends the demonstration of a theorem from my axioms :) <br/>
