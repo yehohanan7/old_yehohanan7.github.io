@@ -38,8 +38,8 @@ A lot of people misunderstand just cosmetic beauty with a living pattern. for in
 Likewise, understanding the brain cells will not explain the abstract concepts like the mind, idea, intuitions, beliefs etc. neither will the understanding of the internals of a turing machine will explain the abstract concept of the turing machine, the turing machine is a reflection of a profound pattern! <br/>
 what makes a good literature? the english alphabets using which the literature is written or the patterns/ideas that it conveys? <br/><br/>
 
-Also in recent days with the agile movement in software industry, a lot of people’s mind is infected with the “Just enough” principle - of course pragmatism is important, but not with the expense of disturbing patterns and copy pasting code to get things done - that sounds like building a pyramid by skipping few layers inbetween <br/>
-I prefer a very strict bottom up development practice which promotes the development of a pattern language to name abstractions and allows us to compose these abstractions and build more composable patterns <br/> <br/>
+Also in recent days with the agile movement in software industry, a lot of people’s mind is infected with the “Just enough” principle - of course pragmatism is important, but not with the expense of disturbing patterns and copy pasting code to get things done - that sounds like building a pyramid by skipping few layers inbetween. <br/>
+I prefer a very strict bottom up development practice, which promotes the development of a pattern language to name every abstraction and also allows us to compose these abstractions to build even more composable abstractions/patterns <br/> <br/>
 
 Identifying patterns and building “reusable” abstractions is the art of software development, who paid attention that the map/reduce patterns could be further decomposed into beautiful patterns called transducers which was introduced in Clojure by rich hickey - that’s true art!<br/> <br/>
 
