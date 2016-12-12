@@ -1,5 +1,5 @@
 ---
-layout: post_page
+layout: post
 title:  "CQRS With DDD"
 date:   2015-03-26
 categories: architecture

@@ -1,8 +1,12 @@
 ---
-layout: post_page
+layout: post
 title:  "Vectors in clojure"
 date:   2015-03-11
+tags:
+- clojure
+- vectors
 categories: clojure
+serie: clojure
 ---
 
 Clojure's vectors are "immutable" collection of ordered elements with almost constant time access (log to base 32 N) to any element. This lead me to open the lid and look at the source code to figure out how clojure achieves immutability and constant time access to the ordered elements without copy on modification.

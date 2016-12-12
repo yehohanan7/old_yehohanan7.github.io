@@ -1,6 +1,50 @@
-auto: true # automatically update your jekyll
-server: true # runs a local server
-paginate: 25 # pagination basted on number of posts
-highlighter: pygments
-exclude: ["Gemfile", "Gemfile.lock", "README.md", 'sass', 'watch.sh', 'style.scss'] # files to exclude
+# Site settings
+title: carcdr
+description: "A blog about lorem ipsum ..."
+baseurl: ""
+url: "http://yehohanan7.github.io"
+# User settings
+username: John Pradeep
+user_title: Developer
+email: yehohanan7@gmail.com
+twitter_username: yehohanan7
+github_username:  yehohanan7
+gplus_username:   yehohanan7
+disqus_username:  yehohanan7
 
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Links to include in menu navigation
+links:
+  - title: home
+    url: /
+  - title: my posts
+    url: /posts
+  - title: series
+    url: /series
+  - title: tags
+    url: /tags
+  - title: about me
+    url: /about
+# projects in header index
+projects:
+  - name: rafty
+    url: https://github.com/yehohanan7/rafty
+  - name: remem
+    url: https://github.com/yehohanan7/remem
+  - name: gog
+    url: https://github.com/yehohanan7/gog
+    
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']

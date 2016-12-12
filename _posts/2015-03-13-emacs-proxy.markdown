@@ -1,5 +1,5 @@
 ---
-layout: post_page
+layout: post
 title:  "Emacs behind proxy"
 date:   2015-03-13
 categories: emacs

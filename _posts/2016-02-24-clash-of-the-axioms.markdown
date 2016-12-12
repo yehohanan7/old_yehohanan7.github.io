@@ -1,5 +1,5 @@
 ---
-layout: post_page
+layout: post
 title:  Clash of the Axioms
 date:   2016-02-24
 categories: General

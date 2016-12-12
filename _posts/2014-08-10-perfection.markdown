@@ -1,5 +1,5 @@
 ---
-layout: post_page
+layout: post
 title:  "Perfection"
 date:   2014-08-31 12:22:40
 categories: elixir

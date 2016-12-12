@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "Raft"
+date:   2016-12-11 12:22:40
+categories: Architecture
+comments: true
+---
+
+You must have heard about raft as an understandable consensus algorithm, In this blog i want to give a quick overview of how to use the go implementation of raft using a sample distributed calculator application
+
+The calculator application is a service which exposes http endpoints to fetch the current state of the calculator, add and subtract a value to the current value/state
+<p>
+    <img src="/assets/img/raft_instance.png" alt>
+</p>
+<p>
+    <em>Two instances with raft</em>
+</p>
+
+
+<h3>LogStore</h3>
+LogStore is used to manage the replicated and indexed logs for each instance, the golang implementation of raft provides a default implementation using boltdb underneath to store logs
+
+<h3>StableStore</h3>
+StableStore is used to manage raft’s configurations and metadata like last commit index, committed index of each peer etc. The default implementation provided by raft for logstore mentioned above is also an implementation of the stablestore, so you could use logstore as a stable store as well. you can notice that raft-boltdb initialises the bolt store with 2 buckets (logs & config) for logstore and stablestore implementations.
+
+<h3>SnapshotStore</h3>
+This component is used by raft to take snapshots of the FSM (calculator in our case) and persist the snapshot so that we won’t loose consistent state of the FSM despite the fact that log compaction can occur regularly.
+
+<h3>PeerStore</h3>
+This component is used by raft to store the details (ip:port) of each peers, raft provides the default implementation which stores the data in a json file.
+
+<h3>Transport</h3>
+This component is used by raft to communicate with other peers, encode/decode rpc messages etc. raft provides a default tcp implementation for the transport.
+
+<h3>Calculator</h3>
+This is an FSM who’s state we wish to replicate consistently. this is the one component you will have to write, you can have a look at the sample code here
+
+<h3>Raft component</h3>
+This is the heart of raft, every abstraction mentioned in the paper like leader election, replication, snapshoting, compaction are all part of this component which needs all the other components listed above to work correctly.
+
+<h3>Sample calculator application</h3>
+
+you can find the sample calculator app on <a href="https://github.com/yehohanan7/rafty" >github</a>
+

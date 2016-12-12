@@ -1,5 +1,5 @@
 ---
-layout: post_page
+layout: post
 title:  SBCL & Swank in docker
 date:   2015-04-04
 categories: devops

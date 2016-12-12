@@ -1,5 +1,5 @@
 ---
-layout: post_page
+layout: post
 title:  "Development Environment using docker"
 date:   2014-12-22 12:22:40
 categories: devops

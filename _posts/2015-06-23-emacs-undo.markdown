@@ -1,5 +1,5 @@
 ---
-layout: post_page
+layout: post
 title:  Emacs undo/redo
 date:   2015-06-23
 categories: Emacs
