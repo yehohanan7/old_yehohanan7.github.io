@@ -15,7 +15,7 @@ CQRS is all about seperating your system into 2 components, one that handles com
 
 The below diagram shows high level view of how your code will be structured if you use CQRS.
 
-<img src="/img/cqrs.jpg">
+<img src="/assets/img/cqrs.jpg">
 
 
 <br/><br/>
