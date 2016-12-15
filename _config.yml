@@ -39,6 +39,8 @@ links:
     url: /about
 # projects in header index
 projects:
+  - name: cqrs
+    url: https://github.com/yehohanan7/cqrs
   - name: rafty
     url: https://github.com/yehohanan7/rafty
   - name: remem
