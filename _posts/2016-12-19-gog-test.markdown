@@ -8,7 +8,7 @@ comments: true
 
 If you are using emacs for writing go code, you could run a test under your cursor quickly using the function **gog-run-test**
 
-you could get other useful emacs interactive functions for golang here https://github.com/yehohanan7/gog
+you could get other useful emacs interactive functions for golang [here](https://github.com/yehohanan7/gog)
 
 
 {% highlight elisp %}
