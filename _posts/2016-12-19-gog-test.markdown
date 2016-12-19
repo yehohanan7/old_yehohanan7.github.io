@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Run go test"
+date:   2016-12-19 12:22:40
+categories: Emacs
+comments: true
+---
+
+If you are using emacs for writing go code, you could run a test under your cursor quickly using the function **gog-run-test**
+
+{% highlight elisp %}
+
+(defun gog-test-name ()
+  (save-excursion
+    (re-search-backward "func")
+    (re-search-forward "T")
+    (word-at-point)))
+
+(defun gog-current-package ()
+  (file-relative-name default-directory (concat (getenv "GOPATH") "/src")))
+
+(defun gog-run-test ()
+  (interactive)
+  (let ((package (gog-current-package))
+        (test-name (gog-test-name)))
+    (shell-command (format "go test %s -run %s" package test-name))))
+
+{% endhighlight %}
