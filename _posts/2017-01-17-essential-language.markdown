@@ -22,12 +22,13 @@ I do agree it makes it a bit easy syntactically, but languages like Scala encour
 There are few people who work on complex modeling problems who might need a lot of support from the language, I am not fortunate enough to work on such domains yet. But majority of the developers (be it Fullstack, half stack, backend engineer, devops engineer et al.) work on projects that involves interacting heavily with real world — move data between micro services, store data, orchestrate between multiple services, react to events, send emails, measure activities, automate everything that could be automated, monitor systems, etc.
 Do you see a common patterns in the kind of work people do?
 
-
+<ul>
 <li>side effect</li>
 <li>parallel</li>
 <li>efficiency</li>
 <li>maintainability/readability</li>
 <li>fast & continuous delivery</li>
+</ul>
 
 <br/>
 
