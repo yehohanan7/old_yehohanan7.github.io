@@ -41,7 +41,7 @@ I think this point can be easily ruled out because you can write pure functions 
 
 <h4>Concurrency</h4>
 
-I agree that languages like Scala helps you write concurrent code, the moment you separate pure functions from impure ones, it becomes even more easier to write highly concurrent code. but there are languages like nodejs, go, erlang (actor model) which are designed keeping this as the primary goal of the language. Although scala copied the actor model from Erlang, it still uses native threads and thread pool which is not as efficient as Erlang’s or Golangs concurrency model.
+I agree that languages like Scala helps you write concurrent code, the moment you separate pure functions from impure ones and making your data structures immutable, it becomes even more easier to write highly concurrent code. but there are languages like nodejs, go, erlang (actor model) which are designed keeping this as the primary goal of the language. Although scala copied the actor model from Erlang, it still uses native threads and thread pool which is not as efficient as Erlang’s or Golangs concurrency model.
 
 
 <h4>Readability & Maintainability</h4>
