@@ -23,11 +23,11 @@ There are few people who work on complex modeling problems who might need a lot 
 Do you see a common patterns in the kind of work people do?
 
 <ul>
-<li>side effect
-<li>parallel
-<li>efficiency
-<li>maintainability/readability
-<li>fast & continuous delivery
+<li>side effect</li>
+<li>parallel</li>
+<li>efficiency</li>
+<li>maintainability/readability</li>
+<li>fast & continuous delivery</li>
 </ul>
 
 <br/><br/>
