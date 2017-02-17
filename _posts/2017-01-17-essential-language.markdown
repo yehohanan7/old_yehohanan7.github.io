@@ -29,7 +29,7 @@ Do you see a common patterns in the kind of work people do?
 <li>maintainability/readability</li>
 <li>fast & continuous delivery</li>
 
-
+<br/>
 
 If you agree that your application belongs to the category mentioned above, where majority of your code has side effects, trying to use IO monads and side effect free functions will lead to a mess!
 Let’s see what are the benefits you would get from a functional language like Mr Bob would propose:
