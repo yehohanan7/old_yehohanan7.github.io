@@ -5,7 +5,6 @@ date:   2017-01-17 12:22:41
 categories: golang
 comments: true
 ---
-<h3>Essential Language</h3>
 
 When everything is going well and one fine morning Mr Bob shows up with full of excitement, guess what? He learnt Scala and while learning Scala he also got acquainted with functional programming, now he thinks his brain is wired in a completely new way! he wants to use Scala on the project!
 
